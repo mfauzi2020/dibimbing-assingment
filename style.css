@@ -1,0 +1,416 @@
+/*---- link font google ---- */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  display: inline;
+}
+
+/*--- CSS Navbar --*/
+nav {
+  width: 100%;
+  padding: 15px;
+  background-color: rgb(37, 36, 36);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+nav ul {
+  padding-inline: 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  list-style-type: none;
+  color: #f7e1e1;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  padding: 5px;
+}
+
+nav a:hover {
+  border-bottom: 2px solid hwb(51 12% 3% / 0.726);
+  border-radius: 10px;
+}
+
+/*--- CSS icon Social Media ---*/
+.social-media {
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.social-media a {
+  color: #fff;
+  width: 60px;
+}
+
+.social-media a:hover {
+  color: rgb(140, 230, 38);
+}
+
+/* CSS Parallax Background */
+.bg {
+  height: 100vh;
+  background: url(/images/dark-bg.png);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Animate for layer */
+@keyframes appear {
+  from {
+    opacity: 0.1;
+    scale: 1;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+/* CSS for first Layer */
+.layer {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 570px;
+  z-index: 2;
+  background-color: rgb(49, 44, 44);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10%;
+}
+.layer h1 {
+  font-family: "Raleway", serif;
+  line-height: 1.5;
+  font-size: 4em;
+  font-weight: 900;
+  background-image: url(/images/dark-bg.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-clip: text;
+  color: transparent;
+  animation: appear 1s linear;
+}
+
+.layer p {
+  font-family: "Raleway", serif;
+  line-height: 1.5;
+  font-size: 2em;
+  font-weight: 900;
+  background-image: url(/images/dark-bg.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-clip: text;
+  color: transparent;
+  animation: appear 1s linear;
+}
+
+.layer img {
+  width: 250px;
+  margin-left: 48em;
+  margin-bottom: 5em;
+  position: absolute;
+  animation: appear 1s linear;
+}
+
+/* Animate for about */
+@keyframes about-animation {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/* CSS Parallax for Content background */
+.content {
+  background-image: url(/images/dark-bg.png);
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+}
+
+.content h1 {
+  text-align: center;
+  font-size: 30px;
+  color: #fadbdb;
+  margin-left: 5px;
+  padding-bottom: 10px;
+  animation: image linear;
+  animation-timeline: view();
+  animation-range: entry 0%;
+}
+
+.content p {
+  width: 60%;
+  color: #ffe8e8;
+  font-size: 20px;
+  padding-bottom: 40px;
+  animation: image linear;
+  animation-timeline: view();
+  animation-range: entry 0%;
+}
+
+#project {
+  background-color: rgb(49, 44, 44);
+}
+
+#project h1 {
+  text-align: center;
+  font-family: "Raleway", serif;
+  color: #fadbdb;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+/* Animate for image in Project content */
+@keyframes image {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/* CSS Project */
+.img-project {
+  animation: image linear;
+  animation-timeline: view();
+  animation-range: entry 0%;
+  display: flex;
+  flex-direction: row;
+}
+
+.img-project img {
+  width: 80%;
+  margin-left: 80px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding-top: 20px;
+}
+
+.img-project img:hover {
+  transform: scale(1.1);
+  transition: all 1s;
+  border-radius: 20px;
+  width: 500px;
+}
+
+/* CSS Card*/
+.card {
+  box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.5);
+  align-items: center;
+  width: 50%;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+/* CSS for other content */
+.content-2 {
+  padding-top: 40px;
+  background-image: url(/images/dark-bg2.png);
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 200px;
+}
+
+.content-2 h1 {
+  text-align: center;
+  font-size: 30px;
+  color: #fadbdb;
+  margin-left: 30px;
+  padding-bottom: 10px;
+  padding-top: 60px;
+}
+
+/* CSS for label input form in Contact */
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #3c4596;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* CSS Container */
+.container {
+  background-image: url(/images/bg-contact.png);
+  background-size: cover;
+  background-attachment: fixed;
+  border-radius: 5px;
+  background-color: hsla(0, 1%, 43%, 0.562);
+  padding: 20px;
+  width: 70%;
+  margin-left: 200px;
+}
+
+/* CSS for other layer */
+.layer2 {
+  width: 100%;
+  height: 750px;
+  background-color: rgb(49, 44, 44);
+  justify-content: center;
+  padding-top: 50px;
+  padding-left: 10px;
+}
+
+/* CSS for Footer */
+footer {
+  padding: 20px;
+  color: white;
+  background-color: rgb(37, 36, 36);
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Responsive Media Queri for Smartphones (potrait/landscape) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -90px;
+  }
+  nav ul {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .layer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .layer h1 {
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 40px;
+  }
+
+  .layer p {
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 20px;
+    width: 500px;
+    text-align: center;
+  }
+
+  .layer img {
+    display: none;
+  }
+
+  .content h1,
+  p {
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+  }
+
+  .img-project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: image linear;
+    animation-timeline: view();
+    animation-range: entry 0%;
+  }
+
+  .img-project img {
+    width: 70%;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  #project {
+    padding-bottom: 30px;
+  }
+
+  .container {
+    margin-left: 90px;
+  }
+}
+
+/* Responsive Media Queri for Tablet */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+  }
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .layer img {
+    display: none;
+  }
+
+  .img-project img {
+    width: 70%;
+  }
+
+  .container {
+    margin-left: 130px;
+  }
+}
